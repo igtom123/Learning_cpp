@@ -102,7 +102,7 @@ int main() {
   */
 
   // If____else
-
+  /*
   if (20 < 30) {
     std::cout << "I am older than youtube" << std::endl;
   }
@@ -115,6 +115,7 @@ int main() {
   }
   // All the above time code can be reduced to the following shorthand
   // if___else.
+
   int times = 22;
   std::string result = (time < 20) ? "Good day" : "Good evening";
   std::cout << result << std::endl;
@@ -123,6 +124,42 @@ int main() {
   int num = 11;
   std::string results = (num % 2) ? "The number is odd" : "The number is even";
   std::cout << results << std::endl;
+  */
+
+  // Switch statement
+  int day = 4;
+  switch (day) {
+  case 1:
+    std::cout << "Monday" << std::endl;
+    break;
+
+  case 2:
+    std::cout << "Tuesday" << std::endl;
+    break;
+
+  case 3:
+    std::cout << "Wednesday" << std::endl;
+    break;
+
+  case 4:
+    std::cout << "Thursday" << std::endl;
+    break;
+
+  case 5:
+    std::cout << "Friday" << std::endl;
+    break;
+
+  case 6:
+    std::cout << "Sartuday" << std::endl;
+    break;
+
+  case 7:
+    std::cout << "Sunday" << std::endl;
+    break;
+
+  default:
+    std::cout << "This is not a day." << std::endl;
+  }
 
   return 0;
 }
