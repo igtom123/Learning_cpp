@@ -102,7 +102,7 @@ int main() {
   */
 
   // If____else
-
+  /*
   if (20 < 30) {
     std::cout << "I am older than youtube" << std::endl;
   }
@@ -123,6 +123,9 @@ int main() {
   int num = 11;
   std::string results = (num % 2) ? "The number is odd" : "The number is even";
   std::cout << results << std::endl;
+  */
+
+  // switch statements
 
   return 0;
 }
