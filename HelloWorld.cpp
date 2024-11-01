@@ -125,7 +125,7 @@ int main() {
   std::string results = (num % 2) ? "The number is odd" : "The number is even";
   std::cout << results << std::endl;
   */
-
+  /*
   // Switch statement
   int day = 4;
   switch (day) {
@@ -160,6 +160,21 @@ int main() {
   default:
     std::cout << "This is not a day." << std::endl;
   }
+  */
+
+  // do____while
+  int i = 0;
+  while (i < 5) {
+    std::cout << i << std::endl;
+    i++;
+  }
+
+  // do____while
+  int h;
+  do {
+    std::cout << h << std::endl;
+    h++;
+  } while (i < 5);
 
   return 0;
 }
