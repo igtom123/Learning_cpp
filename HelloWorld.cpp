@@ -161,7 +161,7 @@ int main() {
     std::cout << "This is not a day." << std::endl;
   }
   */
-
+  /*
   // do____while
   int i = 0;
   while (i < 5) {
@@ -175,6 +175,17 @@ int main() {
     std::cout << h << std::endl;
     h++;
   } while (i < 5);
+  */
+
+  // for____loop
+
+  for (int i = 1; i <= 5; ++i) {
+    std::cout << i;
+
+    for (int j = 1; j <= 10; ++j) {
+      std::cout << j << std::endl;
+    }
+  }
 
   return 0;
 }
