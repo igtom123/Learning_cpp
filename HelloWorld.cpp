@@ -14,6 +14,16 @@
 // that's why it's advisable to write them in CAPS
 enum Levels { LOW = 25, MEDIUM = 50, HIGH = 75 };
 
+// recursion
+// when a function calls itself.
+int sum(int k) {
+  if (k > 0) {
+    return k + sum(k - 1);
+  } else {
+    return 0;
+  }
+}
+
 int main() {
   /*cout << "Hello world"
        << endl; // std::cout is used instead of adding a namespace of std
@@ -326,7 +336,7 @@ int main() {
   std::cout << &name << std::endl;
 
   */
-
+  /*
   // Pointers
 
   // a pointer is a variable that points to a memory address.
@@ -339,6 +349,10 @@ int main() {
 
   // pointer dereferencing
   std::cout << *ptr << std::endl; // Prints what is stored in the ptr location.
+  */
+
+  int result = sum(10);
+  std::cout << result << std::endl;
 
   return 0;
 }
