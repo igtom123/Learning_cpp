@@ -1,8 +1,19 @@
 #include <cmath>
 #include <iostream>
-#include <ostream>
 #include <string>
-// using namespace std;
+// #include <iostream>
+// #include <ostream>
+// #include <string>
+// #include <vector>
+//  using namespace std;
+
+// enums are like structs
+// in full they are called enumerations
+// enumerations means specifically listed
+// They are supposed to be permanent
+// that's why it's advisable to write them in CAPS
+enum Levels { LOW = 25, MEDIUM = 50, HIGH = 75 };
+
 int main() {
   /*cout << "Hello world"
        << endl; // std::cout is used instead of adding a namespace of std
@@ -178,7 +189,7 @@ int main() {
   */
 
   // for____loop
-
+  /*
   for (int i = 1; i <= 5; ++i) {
     std::cout << i;
 
@@ -186,6 +197,148 @@ int main() {
       std::cout << j << std::endl;
     }
   }
+  */
+
+  // break & continue
+  /*
+  for (int i = 0; i < 10; i++) {
+    if (i == 6)
+      break;
+    std::cout << i << std::endl;
+  }
+
+  for (int i = 10; i < 20; i++) {
+    if (i == 15)
+      continue;
+    std::cout << i << std::endl;
+  }
+  */
+  /*
+  // Arrays
+  std::string cars[5] = {"Volvo", "BMW", "Mercedes", "Mazda", "Ford"};
+  int size = sizeof(cars) / sizeof(cars[0]);//this part is essential in the
+  sizeof() function. for (int i = 0; i < size; i++) { std::cout << cars[i] <<
+  std::endl;
+  }
+
+  // foreach____loop
+
+  for (std::string car : cars) {
+    std::cout << car << std::endl;
+  }
+  */
+
+  // vectors
+  // for operations that require adding or removing of elements, vectors are
+  // used.
+  /*
+  std::vector<std::string> carings = {"volvo", "tesla", "toyota"};
+  carings.push_back("BMW");
+
+  for (std::string caring : carings) {
+    std::cout << caring << std::endl;
+  }
+  // to get the size of an array, we can use sizeof() function.
+  std::cout << sizeof(carings) << std::endl;
+  // it returns 24 because the sizeof() function returns the number of bytes and
+  // not the number of strings.
+  */
+
+  // Battleship game exaxple.
+  // we use 1 to show that there is a ship.
+  /*
+  bool ships[4][4] = {{0, 1, 1, 0}, {0, 0, 0, 0}, {0, 0, 1, 0}, {0, 0, 1, 0}};
+  // Take note of the hits the player has taken and how many times they have
+  // played this variables.
+  int hits = 0;
+  int numberOfTurns = 0;
+  while (hits < 4) {
+    int row, column;
+
+    std::cout << "Selecting co-ordinates" << std::endl;
+
+    std::cout << "Choose a row number between 0-3" << std::endl;
+    std::cin >> row;
+
+    std::cout << "Choose a colunmnumber between 0-3." << std::endl;
+    std::cin >> column;
+
+    if (ships[row][column]) {
+      ships[row][column] = 0;
+
+      hits++;
+      std::cout << "hit!" << (4 - hits) << " left\n" << std::endl;
+
+    } else {
+      std::cout << "Miss!" << std::endl;
+    }
+    numberOfTurns++;
+  }
+  std::cout << "Victory!" << std::endl;
+  std::cout << "You won in: " << numberOfTurns << "turns!" << std::endl;
+  */
+  /*
+  // structs
+
+  struct {
+    int myNum;
+    std::string name;
+
+  } myStruct;
+
+  myStruct.myNum = 10;
+  myStruct.name = "Ian";
+  std::cout << "name: " << myStruct.name << std::endl;
+
+  // named structs act as data types
+  struct variable {
+    int age;
+    std::string name;
+  };
+
+  variable employee;
+  employee.name = "Ian";
+  employee.age = 20;
+
+  std::cout << "Name: " << employee.name << std::endl;
+  std::cout << "Age: " << employee.age << std::endl;
+
+  */
+  /*
+  // enums
+  // calling enums
+  // they are mostly used in constants and numbers that you know are not going
+  to change e.g days, months, years etc.
+
+  enum Levels myVar = MEDIUM;
+  std::cout << myVar << std::endl;
+  */
+  /*
+  // references
+
+  std::string food = "pizza";
+  std::string &meal = food;
+
+  std::cout << meal << std::endl;
+  // memory address.
+
+  std::string name = "Ian";
+  std::cout << &name << std::endl;
+
+  */
+
+  // Pointers
+
+  // a pointer is a variable that points to a memory address.
+  std::string food = "Pizza";
+  std::string *ptr = &food;
+
+  std::cout << food << std::endl;
+  std::cout << &food << std::endl; // reference to the location
+  std::cout << ptr << std::endl; // variable with the location of the variable.
+
+  // pointer dereferencing
+  std::cout << *ptr << std::endl; // Prints what is stored in the ptr location.
 
   return 0;
 }
